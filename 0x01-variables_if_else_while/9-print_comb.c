@@ -16,8 +16,11 @@ int main(void)
 	for (printNumbers = 0; printNumbers < 10; printNumbers++)
 	{
 		putchar('0' + printNumbers);
-		putchar(',');
-		putchar(' ');
+		if (printNumbers != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
