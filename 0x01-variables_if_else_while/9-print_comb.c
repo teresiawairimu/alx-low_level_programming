@@ -11,18 +11,14 @@
  */
 int main(void)
 {
-	int outer;
-	int inner;
+	int printNumbers;
 
-	for (outer = 0; outer < 10; outer++)
+	for (printNumbers = 0; printNumbers < 10; printNumbers++)
 	{
-		for (inner = outer; inner < 10; inner++)
-		{
-			putchar('0' + outer);
-			putchar('0' + inner);
-			putchar(',');
-			putchar(' ');
-		}
+		putchar('0' + printNumbers);
+		putchar(',');
+		putchar(' ');
 	}
+	putchar('\n');
 	return (0);
 }
