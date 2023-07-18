@@ -27,7 +27,7 @@ int main(void)
 		{
 			if (outer != inner)
 			{
-				if (outer != 49 || inner != 48)     
+				if (outer != 49 || inner != 48)
 				{
 					putchar(outer);
 					putchar(inner);
