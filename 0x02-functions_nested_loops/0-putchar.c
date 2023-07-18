@@ -10,13 +10,15 @@
  */
 int main(void)
 {
-	char str[] = "_putchar";
-	int m:
-	
-	for (m = 0; str[m] != '\0'; m++)
-	{
-		_putchar(str[m]);
-	}
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 	_putchar('\n');
+
 	return (0);
 }
