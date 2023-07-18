@@ -25,12 +25,18 @@ int main(void)
 	{
 		for (inner = 48; inner <= 57; inner++)
 		{
-			putchar(outer);
-			putchar(inner);
-			if (outer + inner < 144)
+			if (outer != inner)
 			{
-				putchar(44);
-				putchar(32);
+				if (outer != 49 || inner != 48)     
+				{
+					putchar(outer);
+					putchar(inner);
+					if (outer + inner < 144)
+					{
+						putchar(44);
+						putchar(32);
+					}
+				}
 			}
 		}
 	}
