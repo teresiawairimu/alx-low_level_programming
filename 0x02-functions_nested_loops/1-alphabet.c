@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - function to print the alphabet, in lowercase.
  *
- * Description - prints the alphabet
- * in lowercase, followed by a new line
+ * _putchar - writes a character to the standard output.
  *
  * Return: Always 0
  */
