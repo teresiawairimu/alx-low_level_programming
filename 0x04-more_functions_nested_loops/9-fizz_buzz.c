@@ -16,7 +16,7 @@ int main(void)
 	int n;
 	char fizz[] = "Fizz";
 	char buzz[] = "Buzz";
-	char fizzbuzz[] = {'F', 'i', 'z', 'z', 'B', 'u', 'z', 'z', '\0'};
+	char *fizzbuzz = "FizzBuzz";
 
 	for (n = 1; n <= 100; n++)
 	{
