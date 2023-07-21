@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
  * main - Entry point
@@ -13,20 +14,23 @@
 int main(void)
 {
 	int n;
+	char fizz[] = "Fizz";
+	char buzz[] = "Buzz";
+	char fizzbuzz[] = {'F', 'i', 'z', 'z', 'B', 'u', 'z', 'z', '\0'};
 
 	for (n = 1; n <= 100; n++)
 	{
 		if (n % 3 == 0)
 		{
-			printf("Fizz ");
+			printf("%s ", fizz);
 		}
 		else if (n % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("%s ", buzz);
 		}
 		else if (n % 3 == 0 && n % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("%s ", fizzbuzz);
 		}
 		else
 		{
