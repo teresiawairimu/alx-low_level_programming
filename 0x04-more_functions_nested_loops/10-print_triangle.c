@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_triangle - prints a triangle 
+ * print_triangle - prints a triangle
  * followed by a new line
  * @size: function parameter
  * size is the size of the trangle
@@ -16,9 +16,17 @@ void print_triangle(int size)
 	{
 		for (n = 1; n <= size; n++)
 		{
-			for (m = 1; m <= n; m++)
+			for (m = size - n; m > 0; m--)
+			{
+				_putchar(' ');
+			}
+			for (m = 0; m < n; m++)
 			{
 				_putchar('#');
+			}
+			if (n == size)
+			{
+				continue;
 			}
 			_putchar('\n');
 		}
