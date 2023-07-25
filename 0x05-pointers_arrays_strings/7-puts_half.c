@@ -4,29 +4,33 @@
  * puts_half - prints half a string
  * followed by a new line
  * print the second half of the string
- * if the number is odd,
- * the function should print the last n characters of the string
+ * if characters is odd, print the last n characters of the string
  * @str: function parameter
  */
-int _strlen(char *str)
-{
-	int m;
-
-	for (m = 0; *(str + m) != '\0'; m++)
-	{
-		m++;
-	}
-	return (m);
-}
 void puts_half(char *str)
 {
+	int len = 0;
 	int n;
-	int len = _strlen(str);
 
-	for (n = ((len - 1) / 2) + 1; n < len; n++)
+	while (len >= 0)
 	{
-		_putchar(*(str + n));
-		n++;
+		if (str[len] == '\0')
+		{
+			break;
+		}
+		len++;
+	}
+	if (len % 2 == 1)
+	{
+		n = len / 2;
+	}
+	else
+	{
+		n = (len - 1) / 2;
+	}
+	for (n++; n < len; n++)
+	{
+		_putchar(str[n]);
 	}
 	_putchar('\n');
 }
