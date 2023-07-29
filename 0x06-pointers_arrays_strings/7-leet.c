@@ -20,7 +20,8 @@ char *leet(char *str)
 		{
 			if (n[count2] == str[count1])
 			{
-				str[count2] = m[count1];
+				str[count1] = m[count2];
+				break;
 			}
 			count2++;
 		}
