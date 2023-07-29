@@ -32,8 +32,7 @@ char *cap_string(char *str)
 			*str == '(' ||
 			*str == ')' ||
 			*str == '{' ||
-			*str == '}' ||
-			*str == '-')
+			*str == '}')
 		{
 			m = 1;
 		}
