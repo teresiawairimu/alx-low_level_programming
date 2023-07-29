@@ -6,43 +6,42 @@
  *
  * Return: the capitalized string
  */
-int not_alphabet(char c)
-{
-	char ch;
-	for (ch = 'A'; ch <= 'Z'; ch++)
-	{
-		if (c == ch || ch + 32)
-		{
-			return (0);
-		}
-	}
-	for (ch = '0'; ch <= '9'; ch++)
-	{
-		if (c == ch)
-		{
-			return (0);
-		}
-	}
-	return (1);
-}
 char *cap_string(char *str)
 {
-	int n = 0;
-	if (str[n] >= 'a' && str[n] <= 'z')
+	int m = 1;
+
+	while (*str)
 	{
-		str[n] = str[n] - ('a' - 'A');
-	}
-	n++;
-	while (str[n] != '\0')
-	{
-		if (str[n] >= 'a' && str[n] <= 'z')
+		if (m && ((*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z')))
 		{
-			if (not_alphabet(str[n - 1]))
+			if (*str >= 'a' && *str <= 'z')
 			{
-				str[n] = str[n] - ('a' - 'A');
+				*str -= ('a' - 'A');
 			}
+			m = 0;
 		}
-		n++;
+		else if (*str == ' ' ||
+			*str == '\t' ||
+			*str == '\n' ||
+			*str == ',' ||
+			*str == ';' ||
+			*str == '.' ||
+			*str == '!' ||
+			*str == '?' ||
+			*str == '"' ||
+			*str == '(' ||
+			*str == ')' ||
+			*str == '{' ||
+			*str == '}' ||
+			*str == '-')
+		{
+			m = 1;
+		}
+		else if (*str >= '0' && *str <= '9')
+		{
+			m = 0;
+		}
+		str++;
 	}
 	return (str);
 }
