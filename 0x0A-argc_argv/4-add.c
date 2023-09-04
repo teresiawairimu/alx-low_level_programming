@@ -3,11 +3,11 @@
 #include <ctype.h>
 
 /**
- * main: function that adds numbers
- * @argc:Denotes the  number of arguments passed to the function
+ * main - adds numbers
+ * @argc: number of arguments passed to the function
  * @argv: argument vector of pointers to string
  *
- * Return: (0) if no errors, else return (1)
+ * Return: 0 if no errors, elses return 1
  */
 
 int main(int argc, char *argv[])
