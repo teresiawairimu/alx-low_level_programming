@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 /**
- * 
  * _strdup - returns a pointer to a newly allocated memory space
  * the memory contains a copy of the string given as a parameter
  * @str: the string to be duplicated
@@ -16,7 +15,6 @@ char *_strdup(char *str)
 	char *new_mem;
 	unsigned int n;
 
-	
 	if (str == NULL)
 	{
 		return (NULL);
@@ -32,13 +30,11 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	
+
 	for (n = 0; n < length_of_string; n++)
 	{
 		new_mem[n] = *(str + n);
 	}
-	
+
 	return (new_mem);
 }
-	
-
