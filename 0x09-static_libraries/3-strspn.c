@@ -30,10 +30,10 @@ unsigned int _strspn(char *s, char *accept)
                 {
                         break;
                 }
-                n++;
+		n++;
                 s++;
                 accept = original_accept;
-}
+        }
         return (n);
 }
 

@@ -20,8 +20,8 @@ int _atoi(char *s)
                 else if (*s >= '0' && *s <= '9')
                 {
                         m = m * 10 + (*s - '0');
-		}
-		else if (m > 0)
+                }
+                else if (m > 0)
                 {
                         break;
                 }
@@ -29,3 +29,4 @@ int _atoi(char *s)
         }
         return (m * n);
 }
+

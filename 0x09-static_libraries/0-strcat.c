@@ -21,7 +21,7 @@ char *_strcat(char *dest, char *src)
         }
         /* Append the src string to dest */
         while (*src != '\0')
-	{
+        {
                 *dest = *src;
                 dest++;
                 src++;
@@ -30,3 +30,4 @@ char *_strcat(char *dest, char *src)
         *dest = '\0';
         return (finalDest);
 }
+
