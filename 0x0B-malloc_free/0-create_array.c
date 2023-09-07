@@ -32,8 +32,6 @@ char *create_array(unsigned int size, char c)
 		arr1[n] = c;
 	}
 
-	arr1[size] = NULL;
-
-	return (arr1)
+	return (arr1);
 }
 	
