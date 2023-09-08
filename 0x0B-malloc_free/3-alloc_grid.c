@@ -45,7 +45,7 @@ int **alloc_grid(int width, int height)
 			new_mem[n][j] = 0;
 		}
 	}
-	return new_mem;
+	return (new_mem);
 }
 
 
