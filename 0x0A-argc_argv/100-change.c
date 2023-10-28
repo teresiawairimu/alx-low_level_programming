@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
 		if (cents < 0)
 		{
 			printf("0\n");
+			return (1);
 		}
 		number_of_coins = sizeof(coins) / sizeof(coins[0]);
 		count = 0;
