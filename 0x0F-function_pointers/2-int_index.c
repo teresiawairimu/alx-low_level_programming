@@ -5,15 +5,12 @@
 *
 * array: An array of integers
 *
-* size: Number of elements in the @array
+* size: Number of elements in the array
 *
 * cmp: Pointer to the function to be used to compare values
 *
-* Return: integer, index integer in array that matches
-* condition of cmp was found (SUCCESS) or
-* -1 if size <= 0 or integer that matches condition of cmp
-*  wasn't found in @array or
-*  NULL if @array or cmp is NULL
+* Return: returns the index of the first element for which 
+* the cmp function does not return 0 If no element matches, return -1
 */
 
 int int_index(int *array, int size, int (*cmp)(int))
