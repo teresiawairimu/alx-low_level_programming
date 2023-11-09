@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
-* addUpParameters - computes the sum of all input values
-* @n: the total count of parameters
-* Return: the sum of the parameter values
+* sum_them_all - sum of all its parameters
+* @n: total number of parameters
+* Return: sum of value parameters
 */
 
 int sum_them_all(const unsigned int n, ...)
