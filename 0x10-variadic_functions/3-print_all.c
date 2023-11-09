@@ -10,6 +10,31 @@ void print_float(va_list *arg);
 void print_string(va_list *arg);
 
 /**
+* get_func - obtains the associated function for the given format type
+* @fmt_arr: format types array
+* @identifier: format type
+* Return: pointer to a function indicating success or
+* NULL (FAILURE)
+*/
+
+void (*get_func(char identifier, struct format_struct *fmt_arr))(va_list *)
+{
+	int i = 0;
+
+	while (fmt_arr[i].format)
+	{
+		if (fmt_arr[i].format == identifier)
+		{
+			return (fmt_arr[i].fmt_print_func);
+		}
+
+		i++;
+	}
+
+	return (fmt_arr[i].fmt_print_func);
+}
+
+/**
 * print_all - prints data of any data type
 * @format: pointer to a string containing data format specifications
 */
@@ -49,40 +74,6 @@ void print_all(const char * const format, ...)
 	printf("\n");
 }
 
-/**
-* get_func - gets corresponding function of format type
-* @fmt_arr: format types array
-* @identifier: format type
-* Return: pointer to function (SUCCESS) or
-* NULL (FAILURE)
-*/
-
-void (*get_func(char identifier, struct format_struct *fmt_arr))(va_list *)
-{
-	int i = 0;
-
-	while (fmt_arr[i].format)
-	{
-		if (fmt_arr[i].format == identifier)
-		{
-			return (fmt_arr[i].fmt_print_func);
-		}
-
-		i++;
-	}
-
-	return (fmt_arr[i].fmt_print_func);
-}
-
-/**
-* print_char - prints char
-* @arg: pointer to a char
-*/
-
-void print_char(va_list *arg)
-{
-	printf("%c", va_arg(*arg, int));
-}
 
 /**
 * print_int - prints an int
@@ -95,14 +86,15 @@ void print_int(va_list *arg)
 }
 
 /**
-* print_float - displays a data of float type
-* @arg: pointer to float
+* print_char - prints char
+* @arg: pointer to a char
 */
 
-void print_float(va_list *arg)
+void print_char(va_list *arg)
 {
-	printf("%f", va_arg(*arg, double));
+	printf("%c", va_arg(*arg, int));
 }
+
 
 /**
 * print_string - prints a string
@@ -119,3 +111,20 @@ void print_string(va_list *arg)
 	i = str[0] == NULL;
 	printf("%s", str[i]);
 }
+
+/**
+* print_float - displays a data of float type
+* @arg: pointer to float
+*/
+
+void print_float(va_list *arg)
+{
+	printf("%f", va_arg(*arg, double));
+}
+
+
+
+
+
+
+
