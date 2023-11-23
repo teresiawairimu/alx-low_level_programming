@@ -5,6 +5,7 @@
 #include <stdio.h>
 
 unsigned int binary_to_uint(const char *b);
+int check_valid_string(const char *b);
 
 
 #endif /* #ifndef BIT_MANIPULATION_H_ */
