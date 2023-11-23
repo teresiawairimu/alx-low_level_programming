@@ -1,13 +1,12 @@
 #include "main.h"
 /**
- * binary_to_uint - Converts a binary number represented as a string to an unsigned int.
- * @b: String containing the binary number.
- *
- * Return: The unsigned int representation of the binary number.
+ * binary_to_uint - Convert binary string to unsigned int.
+ * @b: Binary number as a string.
+ * Return: Converted value.
  */
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int base_ten = 0;
+unsigned int decimal = 0;
 int str_len = 0, base = 1;
 
 if (!check_valid_string(b))
@@ -18,18 +17,17 @@ str_len++;
 
 while (str_len)
 {
-base_ten += ((b[str_len - 1] - '0') * base);
+decimal += ((b[str_len - 1] - '0') * base);
 base *= 2;
 str_len--;
 }
-return (base_ten);
+return (decimal);
 }
 
 /**
- * check_valid_string - Determines if a string consists solely of binary digits (0 and 1).
- * @b: String to be examined.
- *
- * Return: 1 if the string is valid binary; otherwise, returns 0.
+ * check_valid_string - Check if a string contains only 0's and 1's.
+ * @b: String to be checked.
+ * Return: 1 if valid, 0 otherwise.
  */
 int check_valid_string(const char *b)
 {
