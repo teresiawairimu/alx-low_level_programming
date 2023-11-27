@@ -33,15 +33,15 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-	elf_validation(header->e_ident);
-	print_magic(header->e_ident);
-	print_class(header->e_ident);
-	print_data(header->e_ident);
-	print_version(header->e_ident);
-	print_osabi(header->e_ident);
+	validate_elf(header->e_ident);
+	print_magic_(header->e_ident);
+	print_class_(header->e_ident);
+	print_data_(header->e_ident);
+	print_version_(header->e_ident);
+	print_osabi_(header->e_ident);
 	printf("  ABI Version:                       ");
 	printf("%i\n", header->e_ident[EI_ABIVERSION]);
-	print_type(header->e_type, header->e_ident);
+	print_type_(header->e_type, header->e_ident);
 	print_entry(header->e_entry, header->e_ident);
 	free(header);
 	c = close(f_d);
